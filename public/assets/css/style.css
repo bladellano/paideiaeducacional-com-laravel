@@ -1,0 +1,181 @@
+/* Importe a fonte do Google que deseja usar */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap');
+
+:root {
+    --primary-color: #7f9c97;
+    --secondary-color: #6c757d;
+    --text-color: #003642;
+    --background-color: var(--primary-color);
+    --white-color: #fff;
+    --high-color: #fdf001;
+    --font-size: 16px;
+    --line-height: 1.5;
+    --border-radius: 4px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --font-family: 'Nunito', sans-serif;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: 400;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+/* Adicione mais estilos personalizados aqui */
+.contact-list {
+    padding: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bg-default {
+    background-color: var(--background-color) !important;
+}
+
+.btn-high {
+    background-color: var(--high-color) !important;
+    color: var(--text-color) !important;
+}
+
+.bar-social-icons {
+    background-color: var(--background-color);
+}
+
+.list-socials {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    li {
+        background-color: var(--white-color);
+        padding: 4px;
+        margin: 0 2px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+    }
+}
+
+/* Custom Carousel */
+.carousel-inner {
+    overflow: auto;
+    height: 60vh;
+}
+
+/* CSS para ativar o dropdown no hover */
+.navbar-nav a {
+    font-weight: 700;
+    font-size: 1.0rem;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Certifique-se de que o dropdown não seja exibido por padrão */
+.dropdown-menu {
+    display: none;
+}
+
+section {
+    padding: 38px 0;
+
+    h2,
+    h3 {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 900;
+        text-align: center;
+        color: var(--text-color);
+    }
+
+    h2 {
+        border: 2px solid var(--high-color);
+        display: inline-block;
+        padding: 4px 18px;
+        border-radius: 26px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        opacity: .8;
+    }
+
+    hr {
+        border: 3px solid var(--primary-color);
+        margin: 0 auto;
+        width: 180px;
+        margin-bottom: 14px;
+    }
+
+}
+
+section.bg-default {
+
+    h2 {
+        border: 2px solid var(--white-color);
+        color: var(--white-color);
+    }
+
+    p,
+    h3 {
+        color: var(--white-color);
+    }
+
+    hr {
+        border-color: var(--white-color);
+    }
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    position: relative;
+    top: 75px;
+}
+
+.move-up {
+    background-color: var(--high-color);
+    width: 50px;
+    height: 50px;
+    color: var(--text-color);
+    text-align: center;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    padding-top: 2px;
+    cursor: pointer;
+    z-index: 999;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 6px 4px 40px #6668;
+}
+
+.developer{
+    color: var(--high-color);
+}
