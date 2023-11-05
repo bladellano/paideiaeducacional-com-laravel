@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;
 use App\Http\Controllers\EventController;
 
 /*
@@ -15,9 +16,7 @@ use App\Http\Controllers\EventController;
 |
 */
 
-Route::get('/', function () {
-    return view('site.home');
-});
+Route::get('/', [SiteController::class,'home']);
 
 Auth::routes();
 

@@ -56,9 +56,29 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h2>EVENTOS</h2>
+
+                    <swiper-container 
+                        class="anyClass" 
+                        pagination="true" 
+                        pagination-clickable="true" 
+                        space-between="30"
+                        slides-per-view="3"
+                    >
+
+                        @foreach($events as $event)
+
+                        <swiper-slide> 
+                            <p>{{ $event->title }}</p>
+                            <span>{{ $event->event_date }}</span>
+                            <img src="{{ asset('assets/images') }}/{{ $event->image }}" alt="{{ $event->title }}">
+                        </swiper-slide>
+
+                        @endforeach
+
+                    </swiper-container>
+
                 </div>
             </div>
-            <p>Conteúdo seção.</p>
         </div>
     </section>
 

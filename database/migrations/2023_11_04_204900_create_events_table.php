@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('image');
+            $table->date('event_date');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
 
