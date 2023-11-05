@@ -86,7 +86,7 @@
         </div>
     </section>
 
-    {{-- COTESTIMONIALSNTACT --}}
+    {{-- TESTIMONIAL --}}
     <section id="testimonials">
         <div class="container">
 

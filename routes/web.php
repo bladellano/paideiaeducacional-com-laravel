@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +27,14 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-        Route::get('/events', function () {
-            return view('admin.events.index');
+        Route::prefix('events')->group(function () {
+            Route::get('/', [EventController::class, 'index'])->name('events.index');
+            Route::post('/store', [EventController::class, 'store'])->name('events.store');
+            Route::get('/create', [EventController::class, 'create'])->name('events.create');
+            Route::get('/{event}/edit', [EventController::class, 'edit'])->name('events.edit');
+            Route::put('/update/{event}', [EventController::class, 'update'])->name('events.update');
+            Route::delete('/destroy/{event}', [EventController::class, 'destroy'])->name('events.destroy');
         });
+        
     });
 });
