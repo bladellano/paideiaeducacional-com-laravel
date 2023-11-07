@@ -90,7 +90,49 @@
                     <h2>VIDEOS</h2>
                 </div>
             </div>
-            <p>Conteúdo seção.</p>
+            
+            <div class="row">
+
+                <div class="col-md-6">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat harum quod laborum blanditiis maiores architecto cupiditate veniam fuga distinctio. Dolores nemo et cupiditate, iste laborum necessitatibus suscipit nobis odit rerum, dicta quis, placeat architecto animi voluptatum ullam non tempora qui.</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat harum quod laborum blanditiis maiores architecto cupiditate veniam fuga distinctio. Dolores nemo et cupiditate, iste laborum necessitatibus suscipit nobis odit rerum, dicta quis, placeat architecto animi voluptatum ullam non tempora qui.</p>
+                </div>
+
+                <div class="col-md-6 d-flex justify-content-center">
+
+                    <swiper-container
+                    class="mySwiper"
+                    pagination="true"
+                    effect="cube"
+                    grab-cursor="true"
+                    cube-effect-shadow="true"
+                    cube-effect-slide-shadows="true"
+                    cube-effect-shadow-offset="20"
+                    cube-effect-shadow-scale="0.94"
+                    >
+
+                        @foreach($videos as $video)
+
+                            <swiper-slide>
+                                <iframe
+                                    width="430" 
+                                    height="370" 
+                                    src="{{ $video->url }}" 
+                                    title="{{ $video->title }}" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen
+                                >
+                                </iframe>
+                            </swiper-slide>
+
+                        @endforeach 
+
+                    </swiper-container>
+
+                </div>
+            </div>
         </div>
     </section>
 
