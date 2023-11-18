@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -14,7 +15,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('admin.events.index');
+        $events = Event::latest()->get();
+
+        return view('admin.events.index', compact('events'));
     }
 
     /**
@@ -38,12 +41,17 @@ class EventController extends Controller
         $data = $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
-            'image' => 'required',
+            'event_date' => 'required|date_format:Y-m-d',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+
+        // Lidar com o upload da imagem
+        if ($request->hasFile('image'))
+            $data['image'] = $request->file('image')->store('images/events', 'public');
 
         Event::create($data);
 
-        return redirect()->route('events.create')->with('message', 'Register created successfully');
+        return redirect()->route('events.create')->with('message', 'Registro criado com sucesso!');
     }
 
     /**
@@ -86,8 +94,14 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Event $event)
     {
-        //
+
+        if (Storage::disk('public')->exists($event->image));
+        Storage::disk('public')->delete($event->image);
+
+        $event->delete();
+
+        return redirect()->route('events.index')->with('message', 'Registro excluído com sucesso!');
     }
 }

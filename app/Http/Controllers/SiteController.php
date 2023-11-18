@@ -11,10 +11,10 @@ class SiteController extends Controller
     public function home()
     {
         # $events = Event::latest()->limit(3)->get();
-        $events = Event::all();
+        $events = Event::latest()->get();
         # $videos = Video::all();
         $videos = Video::latest()->limit(3)->get();
 
-        return view('site.home', compact('events','videos'));
+        return view('site.home', compact('events', 'videos'));
     }
 }

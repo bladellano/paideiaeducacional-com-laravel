@@ -70,7 +70,7 @@
                         <swiper-slide> 
                             <p>{{ $event->title }}</p>
                             <span>{{ $event->event_date }}</span>
-                            <img src="{{ asset('assets/images') }}/{{ $event->image }}" alt="{{ $event->title }}">
+                            <img src="{{ asset('storage/' . $event->image) }}" alt="{{ $event->title }}">
                         </swiper-slide>
 
                         @endforeach
