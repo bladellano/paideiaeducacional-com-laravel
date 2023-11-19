@@ -16,14 +16,17 @@
         <div class="col-md-6">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Cadastrar</h3>
+                    <h3 class="card-title">{{ __('Edição') }}</h3>
                 </div>
 
-                <form action="{{ route('events.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('events.update', $event) }}" method="post" enctype="multipart/form-data">
+
+                    @method('PUT')
 
                     @include('admin.events.form')
 
                 </form>
+
             </div>
         </div>
     </div>

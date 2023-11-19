@@ -51,7 +51,7 @@ class EventController extends Controller
 
         Event::create($data);
 
-        return redirect()->route('events.create')->with('message', 'Registro criado com sucesso!');
+        return redirect()->route('events.index')->with('message', 'Registro criado com sucesso!');
     }
 
     /**
@@ -71,9 +71,9 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Event $event)
     {
-        //
+        return view('admin.events.edit', ['event' => $event]);
     }
 
     /**
@@ -83,9 +83,27 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Event $event)
     {
-        //
+        $data = $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required',
+            'event_date' => 'required|date_format:Y-m-d',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        // Lidar com o upload da imagem
+        if ($request->hasFile('image')) {
+
+            if (Storage::disk('public')->exists($event->image));
+            Storage::disk('public')->delete($event->image);
+
+            $data['image'] = $request->file('image')->store('images/events', 'public');
+        }
+
+        $event->update($data);
+
+        return redirect()->route('events.index')->with('message', 'Registro atualizado com sucesso!');
     }
 
     /**
