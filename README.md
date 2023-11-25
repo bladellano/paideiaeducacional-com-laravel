@@ -18,4 +18,7 @@ php artisan storage:link
 php artisan config:cache    
 
 php artisan cache:clear  
+
+ln -s ../storage/app/public storage
+
 ```
