@@ -15,6 +15,11 @@
         position: relative;
     }
 
+    swiper-slide p a {
+        color: #fff;
+        text-decoration: none;
+    }
+
     swiper-slide p,
     swiper-slide span {
         position: absolute;
