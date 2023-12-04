@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
+use App\Models\Banner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class EventController extends Controller
+class BannerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::latest()->get();
+        $banners = Banner::latest()->get();
 
-        return view('admin.events.index', compact('events'));
+        return view('admin.banners.index', compact('banners'));
     }
 
     /**
@@ -27,7 +27,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('admin.events.create');
+        return view('admin.banners.create');
     }
 
     /**
@@ -41,74 +41,72 @@ class EventController extends Controller
         $data = $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
-            'event_date' => 'required|date_format:Y-m-d',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         // Lidar com o upload da imagem
         if ($request->hasFile('image'))
-            $data['image'] = $request->file('image')->store('images/events', 'public');
+            $data['image'] = $request->file('image')->store('images/banners', 'public');
 
-        Event::create($data);
+        Banner::create($data);
 
-        return redirect()->route('events.index')->with('message', 'Registro criado com sucesso!');
+        return redirect()->route('banners.index')->with('message', 'Registro criado com sucesso!');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Event $event
+     * @param Banner $banner
      * @return void
      */
-    public function edit(Event $event)
+    public function edit(Banner $banner)
     {
-        return view('admin.events.edit', compact('event'));
+        return view('admin.banners.edit', compact('banner'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param Event $event
+     * @param Banner $banner
      * @return void
      */
-    public function update(Request $request, Event $event)
+    public function update(Request $request, Banner $banner)
     {
         $data = $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
-            'event_date' => 'required|date_format:Y-m-d',
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         // Lidar com o upload da imagem
         if ($request->hasFile('image')) {
 
-            if (Storage::disk('public')->exists($event->image));
-            Storage::disk('public')->delete($event->image);
+            if (Storage::disk('public')->exists($banner->image));
+            Storage::disk('public')->delete($banner->image);
 
-            $data['image'] = $request->file('image')->store('images/events', 'public');
+            $data['image'] = $request->file('image')->store('images/banners', 'public');
         }
 
-        $event->update($data);
+        $banner->update($data);
 
-        return redirect()->route('events.index')->with('message', 'Registro atualizado com sucesso!');
+        return redirect()->route('banners.index')->with('message', 'Registro atualizado com sucesso!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param Event $event
+     * @param Banner $banner
      * @return void
      */
-    public function destroy(Event $event)
+    public function destroy(Banner $banner)
     {
 
-        if (Storage::disk('public')->exists($event->image));
-        Storage::disk('public')->delete($event->image);
+        if (Storage::disk('public')->exists($banner->image));
+        Storage::disk('public')->delete($banner->image);
 
-        $event->delete();
+        $banner->delete();
 
-        return redirect()->route('events.index')->with('message', 'Registro excluído com sucesso!');
+        return redirect()->route('banners.index')->with('message', 'Registro excluído com sucesso!');
     }
 }

@@ -66,8 +66,15 @@ Usage: codyhouse.co/license
     vertical-align: top;
   }
   
-  a {
-    color: hsl(250, 84%, 54%);
+  .slideshow__content a {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 3px 5px 6px #000;
+    transition: .3s all;
+  }
+
+  .slideshow__content a:hover{
+    color: var(--primary-color);
   }
   
   table {

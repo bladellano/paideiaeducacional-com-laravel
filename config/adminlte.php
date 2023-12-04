@@ -328,6 +328,20 @@ return [
             ],
         ],
         [
+            'text'    => 'Banners',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Todos',
+                    'url'  => 'admin/banners',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/banners/create',
+                ],
+            ],
+        ],
+        [
             'text'    => 'Páginas',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [

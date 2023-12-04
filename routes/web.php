@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BannerController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
@@ -16,8 +17,9 @@ use App\Http\Controllers\EventController;
 |
 */
 
-Route::get('/', [SiteController::class,'home'])->name('site.home');
-Route::get('/evento/{slug}', [SiteController::class,'event'])->name('site.events');
+Route::get('/', [SiteController::class, 'home'])->name('site.home');
+Route::get('/evento/{slug}', [SiteController::class, 'event'])->name('site.events');
+Route::get('/banner/{slug}', [SiteController::class, 'banner'])->name('site.banners');
 
 Auth::routes();
 
@@ -27,14 +29,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-        Route::prefix('events')->group(function () {
-            Route::get('/', [EventController::class, 'index'])->name('events.index');
-            Route::post('/store', [EventController::class, 'store'])->name('events.store');
-            Route::get('/create', [EventController::class, 'create'])->name('events.create');
-            Route::get('/{event}/edit', [EventController::class, 'edit'])->name('events.edit');
-            Route::put('/update/{event}', [EventController::class, 'update'])->name('events.update');
-            Route::delete('/destroy/{event}', [EventController::class, 'destroy'])->name('events.destroy');
-        });
-        
+        Route::resource('events', EventController::class);
+        Route::resource('banners', BannerController::class);
     });
 });

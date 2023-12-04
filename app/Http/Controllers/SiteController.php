@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Models\Video;
+use App\Models\Banner;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -15,12 +16,20 @@ class SiteController extends Controller
         # $videos = Video::all();
         $videos = Video::latest()->limit(3)->get();
 
-        return view('site.home', compact('events', 'videos'));
+        $banners = Banner::latest()->limit(3)->get();
+
+        return view('site.home', compact('events', 'videos', 'banners'));
     }
 
     public function event($slug)
     {
         $event = Event::where('slug', $slug)->first();
         return view('site.events', compact('event'));
+    }
+
+    public function banner($slug)
+    {
+        $banner = Event::where('slug', $slug)->first();
+        return view('site.banners', compact('banner'));
     }
 }
