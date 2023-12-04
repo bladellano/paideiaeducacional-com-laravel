@@ -23,8 +23,9 @@
                         <thead class="table-light">
                             <tr>
                                 <th>ID</th>
-                                <th>Nome</th>
-                                <th>Descrição</th>
+                                <th>Título</th>
+                                <th>Slug</th>
+                                <th>Data do Evento</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -34,7 +35,8 @@
                                 <tr>
                                     <td>{{ $event->id }}</td>
                                     <td>{{ $event->title }}</td>
-                                    <td>{{ $event->description }}</td>
+                                    <td>{{ $event->slug }}</td>
+                                    <td>{{ $event->event_date }}</td>
                                     <td><a href="{{ route('events.edit', $event) }}" class="btn btn-sm btn-default"><i class="fa fa-edit"></i></a></td>
                                     <td>
                                         <form id="form_{{ $event->id }}" method="post"

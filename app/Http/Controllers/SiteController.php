@@ -17,4 +17,10 @@ class SiteController extends Controller
 
         return view('site.home', compact('events', 'videos'));
     }
+
+    public function event($slug)
+    {
+        $event = Event::where('slug', $slug)->first();
+        return view('site.events', compact('event'));
+    }
 }

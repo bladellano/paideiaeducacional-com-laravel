@@ -16,7 +16,8 @@ use App\Http\Controllers\EventController;
 |
 */
 
-Route::get('/', [SiteController::class,'home']);
+Route::get('/', [SiteController::class,'home'])->name('site.home');
+Route::get('/evento/{slug}', [SiteController::class,'event'])->name('site.events');
 
 Auth::routes();
 

@@ -1,6 +1,12 @@
 $(function () {
 
-    // Script geral da area de admin.
+    // Script geral da area de admin.,
+
+    $('.summernote').summernote({
+        placeholder: '...',
+        tabsize: 2,
+        height: 200
+    });
 
     var traducaoDataTable = {
         "sEmptyTable": "Nenhum dado disponível na tabela",

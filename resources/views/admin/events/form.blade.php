@@ -15,7 +15,8 @@
     <div class="form-group">
 
         <label for="description">Descrição</label>
-        <textarea name="description" id="description" cols="30" rows="5" class="form-control">{{ $event->description ?? old('description') }}</textarea>
+
+        <textarea name="description" id="description" cols="30" rows="5" class="summernote">{{ $event->description ?? old('description') }}</textarea>
         @error('description')
             <div class="text-danger">{{ $message }}</div>
         @enderror

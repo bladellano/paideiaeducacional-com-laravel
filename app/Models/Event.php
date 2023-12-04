@@ -5,12 +5,13 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 
 class Event extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','description','event_date','image'];
+    protected $fillable = ['title', 'slug', 'description', 'event_date', 'image'];
 
     public function user()
     {
@@ -26,7 +27,14 @@ class Event extends Model
     {
         parent::boot();
 
+        static::updating(function ($event) {
+            $event->slug = Str::slug($event->title);
+        });
+
         static::creating(function ($event) {
+            
+            $event->slug = Str::slug($event->title);
+
             if (auth()->check())
                 $event->user_id = auth()->id();
         });

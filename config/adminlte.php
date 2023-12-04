@@ -501,6 +501,31 @@ return [
     */
 
     'plugins' => [
+        'Custom' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'assets/js/admin/main.js',
+                ],
+            ]
+        ],
+        'Summernote' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '//cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css',
+                ],
+            ]
+        ],
         'Datatables' => [
             'active' => true,
             'files' => [
@@ -508,11 +533,6 @@ return [
                     'type' => 'js',
                     'asset' => true,
                     'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => true,
-                    'location' => 'assets/js/admin/main.js',
                 ],
                 [
                     'type' => 'js',
