@@ -29,7 +29,7 @@ class SiteController extends Controller
 
     public function banner($slug)
     {
-        $banner = Event::where('slug', $slug)->first();
+        $banner = Banner::where('slug', $slug)->first();
         return view('site.banners', compact('banner'));
     }
 }
