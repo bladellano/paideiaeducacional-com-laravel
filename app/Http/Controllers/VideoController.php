@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class VideoController extends Controller
@@ -13,7 +14,9 @@ class VideoController extends Controller
      */
     public function index()
     {
-        //
+        $videos = Video::latest()->get();
+
+        return view('admin.videos.index', compact('videos'));
     }
 
     /**
@@ -23,7 +26,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.videos.create');
     }
 
     /**
@@ -34,51 +37,59 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $data = $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required',
+            'url' => 'required',
+        ]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        Video::create($data);
+
+        return redirect()->route('videos.index')->with('message', 'Registro criado com sucesso!');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Video $video
+     * @return void
      */
-    public function edit($id)
+    public function edit(Video $video)
     {
-        //
+        return view('admin.videos.edit', compact('video'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Video $video
+     * @return void
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Video $video)
     {
-        //
+        $data = $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required',
+            'url' => 'required',
+        ]);
+
+        $video->update($data);
+
+        return redirect()->route('videos.index')->with('message', 'Registro atualizado com sucesso!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Video $video
+     * @return void
      */
-    public function destroy($id)
+    public function destroy(Video $video)
     {
-        //
+
+        $video->delete();
+
+        return redirect()->route('videos.index')->with('message', 'Registro excluído com sucesso!');
     }
 }

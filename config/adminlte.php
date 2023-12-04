@@ -342,6 +342,20 @@ return [
             ],
         ],
         [
+            'text'    => 'Videos',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Todos',
+                    'url'  => 'admin/videos',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/videos/create',
+                ],
+            ],
+        ],
+        [
             'text'    => 'Páginas',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
@@ -366,20 +380,6 @@ return [
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/articles/create',
-                ],
-            ],
-        ],
-        [
-            'text'    => 'Videos',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'Todos',
-                    'url'  => 'admin/videos',
-                ],
-                [
-                    'text' => 'Criar',
-                    'url'  => 'admin/videos/create',
                 ],
             ],
         ],

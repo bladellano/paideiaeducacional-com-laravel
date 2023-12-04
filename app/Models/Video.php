@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 
 class Video extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description', 'url'];
+    protected $fillable = ['title', 'slug', 'description', 'url'];
 
     public function user()
     {
@@ -20,7 +21,14 @@ class Video extends Model
     {
         parent::boot();
 
+        static::updating(function ($video) {
+            $video->slug = Str::slug($video->title);
+        });
+
         static::creating(function ($video) {
+
+            $video->slug = Str::slug($video->title);
+
             if (auth()->check())
                 $video->user_id = auth()->id();
         });
