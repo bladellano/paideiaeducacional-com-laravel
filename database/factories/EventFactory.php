@@ -19,7 +19,8 @@ class EventFactory extends Factory
         return [
             "title" => $this->faker->sentence(3,true),
             "description" => $this->faker->sentence(6,true),
-            "image" => $this->faker->image('public/assets/images',640, 480, null, false),
+            // "image" => $this->faker->image('public/assets/images',640, 480, null, false),
+            'image' => '',
             "event_date" => $this->faker->date(),
             "user_id" => 1
         ];

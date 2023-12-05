@@ -14,7 +14,7 @@ class SiteController extends Controller
         # $events = Event::latest()->limit(3)->get();
         $events = Event::latest()->get();
         # $videos = Video::all();
-        $videos = Video::latest()->limit(3)->get();
+        $videos = Video::latest()->limit(4)->get();
 
         $banners = Banner::latest()->limit(3)->get();
 

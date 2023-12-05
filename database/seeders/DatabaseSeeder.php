@@ -44,5 +44,67 @@ class DatabaseSeeder extends Seeder
             'url' => 'https://www.youtube.com/embed/pl2poFzP8v0?si=Mf9jvSgOhF99yefb',
             'user_id' => 1,
         ]);
+
+        \App\Models\Video::factory()->create([
+            'title' => 'Entrevista Pimpolinho',
+            'slug' => 'entrevista-pimpolinho',
+            'description' => 'Entrevista Pimpolinho',
+            'url' => 'https://www.youtube.com/embed/sYqu77wz_To?si=iJN75ENE75FI7dLc',
+            'user_id' => 1,
+        ]);
+
+        // Created multi banners
+        \App\Models\Banner::factory()->create([
+            'title' => 'Primeiro Banner',
+            'slug' => 'primeiro-banner',
+            'description' => 'Biltong pastrami buffalo, ribeye pork chop shank corned beef pancetta aliquip meatloaf',
+            'image' => 'images/banners/banner-01.jpg',
+            'user_id' => 1,
+        ]);
+
+        \App\Models\Banner::factory()->create([
+            'title' => 'Segundo Banner',
+            'slug' => 'segundo-banner',
+            'description' => 'Beef commodo est, shoulder elit frankfurter cupim nisi ipsum laboris strip steak pastrami consequat',
+            'image' => 'images/banners/banner-02.jpg',
+            'user_id' => 1,
+        ]);
+
+        // Created multi events
+        \App\Models\Event::factory()->create([
+            'title' => 'Vendas Poderoas Kotaro Tuji - Santarém',
+            'slug' => 'vendas-poderosas-kotaro-tuji-santarem',
+            'description' => 'Biltong pastrami buffalo, ribeye pork chop shank corned beef pancetta aliquip meatloaf',
+            'event_date' => '2020-12-10',
+            'image' => 'images/events/evento-02.jpg',
+            'user_id' => 1,
+        ]);
+
+        \App\Models\Event::factory()->create([
+            'title' => 'Workshop - Conversando sobre a BNCC',
+            'slug' => 'workshop-conversando-sobre-a-bncc',
+            'description' => 'Pastrami buffalo, ribeye pork chop shank corned beef pancetta aliquip meatloaf',
+            'event_date' => '2020-12-15',
+            'image' => 'images/events/evento-03.jpg',
+            'user_id' => 1,
+        ]);
+
+        \App\Models\Event::factory()->create([
+            'title' => 'XVII Semana da Pedagogica',
+            'slug' => 'xvii-semana-da-pedagogica',
+            'description' => 'Buffalo, ribeye pork chop shank corned beef pancetta aliquip meatloaf',
+            'event_date' => '2020-12-15',
+            'image' => 'images/events/evento-04.jpg',
+            'user_id' => 1,
+        ]);
+
+        \App\Models\Event::factory()->create([
+            'title' => 'Jornada pedagógica nas escolas',
+            'slug' => 'jornada-pedagogica-nas-escolas',
+            'description' => 'Pork chop shank corned beef pancetta aliquip meatloaf',
+            'event_date' => '2020-12-15',
+            'image' => 'images/events/evento-01.jpg',
+            'user_id' => 1,
+        ]);
     }
 }
