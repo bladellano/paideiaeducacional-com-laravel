@@ -106,5 +106,28 @@ class DatabaseSeeder extends Seeder
             'image' => 'images/events/evento-01.jpg',
             'user_id' => 1,
         ]);
+
+        // Created multi pages
+        \App\Models\Page::factory()->create([ //1
+            'title' => 'ASSESSORIA E CONSULTORIA EM PROJETOS EDUCACIONAIS E EMPRESARIAIS',
+            'slug' => 'assessoria-e-consultoria-em-projetos-educacionais-e-empresariais',
+            'description' => '<p>
+            A Paideia Educacional é uma empresa de assessoria e consultoria na área de educação e
+            empresarial formada por profissionais renomados na área, que atuaram no ensino superior,
+            escolas na educação básica, profissionalizantes, técnicas, realizações de eventos
+            educacionais e empresarias há mais de 15 anos, tendo exercido neste período diversas
+            atividades e ocupando postos nas Instituições de Ensino, colhendo resultados positivos nos
+            trabalhos realizados.
+            </p>',
+            'user_id' => 1,
+        ]);
+
+        \App\Models\Page::factory()->create([ //2
+            'title' => 'SEJA BEM-VINDO AO CANAL DA PAIDEIA EDUCACIONAL',
+            'slug' => 'seja-bem-vindo-ao-canal-da-paideia-educacional',
+            'description' => '<p>Uma fonte inesgotável de aprendizado e descobertas educacionais! Na Paideia, acreditamos no poder transformador da educação e estamos comprometidos em oferecer conteúdos de qualidade que inspiram, ensinam e impulsionam o desenvolvimento intelectual.</p>
+            <p>Em nosso canal no <a href="https://www.youtube.com/@paideiaeducacional6957" target="_blank">YouTube</a>, você encontrará uma extensa coleção de vídeos cuidadosamente elaborados por nossos educadores apaixonados. Desde aulas envolventes até dicas de estudo, passando por projetos educativos e eventos especiais, nosso objetivo é proporcionar uma experiência educacional única e acessível a todos.</p>',
+            'user_id' => 1,
+        ]);
     }
 }

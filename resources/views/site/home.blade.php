@@ -54,13 +54,12 @@
             <div class="row">
                 <div class="col-md-6">
                     <p class="text-end" style="line-height: 30px;">
-                        <strong>ASSESSORIA E CONSULTORIA EM PROJETOS EDUCACIONAIS E EMPRESARIAIS</strong><br />
-                        A Paideia Educacional é uma empresa de assessoria e consultoria na área de educação e
-                        empresarial formada por profissionais renomados na área, que atuaram no ensino superior,
-                        escolas na educação básica, profissionalizantes, técnicas, realizações de eventos
-                        educacionais e empresarias há mais de 15 anos, tendo exercido neste período diversas
-                        atividades e ocupando postos nas Instituições de Ensino, colhendo resultados positivos nos
-                        trabalhos realizados.
+
+                        @if ($sobre)
+                            <h3>{{ $sobre->title }}</h3><br />
+                            {!! $sobre->description !!}
+                        @endif
+
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -130,15 +129,12 @@
             <div class="row">
 
                 <div class="col-md-6">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat harum quod laborum blanditiis
-                        maiores architecto cupiditate veniam fuga distinctio. Dolores nemo et cupiditate, iste laborum
-                        necessitatibus suscipit nobis odit rerum, dicta quis, placeat architecto animi voluptatum ullam non
-                        tempora qui.</p>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat harum quod laborum blanditiis
-                        maiores architecto cupiditate veniam fuga distinctio. Dolores nemo et cupiditate, iste laborum
-                        necessitatibus suscipit nobis odit rerum, dicta quis, placeat architecto animi voluptatum ullam non
-                        tempora qui.</p>
+                    @if ($canal)
+                    <h3>{{ $canal->title }}</h3><br />
+                    {!! $canal->description !!}
+                    @endif
+
                 </div>
 
                 <div class="col-md-6 d-flex justify-content-center">
