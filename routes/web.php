@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::get('/', [SiteController::class, 'home'])->name('site.home');
 Route::get('/evento/{slug}', [SiteController::class, 'event'])->name('site.events');
 Route::get('/banner/{slug}', [SiteController::class, 'banner'])->name('site.banners');
 Route::get('/video/{slug}', [SiteController::class, 'video'])->name('site.videos');
+Route::get('/noticia/{slug}', [SiteController::class, 'article'])->name('site.articles');
+Route::get('/todas-as-noticias', [SiteController::class, 'allArticles'])->name('site.all-articles');
 
 Route::get('/{slug}', [SiteController::class, 'page'])
 ->where('slug', '^(?!admin|login).*|^(admin|login)?$') // Permite vazias, 'admin' ou 'login'
@@ -41,5 +44,6 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('pages', PageController::class);
         Route::resource('banners', BannerController::class);
         Route::resource('videos', VideoController::class);
+        Route::resource('articles', ArticleController::class);
     });
 });

@@ -6,6 +6,7 @@ use App\Models\Event;
 use App\Models\Video;
 use App\Models\Banner;
 use App\Models\Page;
+use App\Models\Article;
 
 class SiteController extends Controller
 {
@@ -18,10 +19,12 @@ class SiteController extends Controller
 
         $banners = Banner::latest()->limit(3)->get();
 
+        $articles = Article::latest()->limit(4)->get();
+
         $sobre = Page::where('slug', 'assessoria-e-consultoria-em-projetos-educacionais-e-empresariais')->first();
         $canal =  Page::where('slug', 'seja-bem-vindo-ao-canal-da-paideia-educacional')->first();
 
-        return view('site.home', compact('events', 'videos', 'banners', 'sobre', 'canal'));
+        return view('site.home', compact('events', 'videos', 'banners', 'sobre', 'canal','articles'));
     }
 
     public function page($slug)
@@ -40,5 +43,17 @@ class SiteController extends Controller
     {
         $banner = Banner::where('slug', $slug)->first();
         return view('site.banners', compact('banner'));
+    }
+
+    public function article($slug)
+    {
+        $article = Article::where('slug', $slug)->first();
+        return view('site.articles', compact('article'));
+    }
+
+    public function allArticles()
+    {
+        $articles = Article::all();
+        return view('site.all-articles', compact('articles'));
     }
 }

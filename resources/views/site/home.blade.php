@@ -1,9 +1,8 @@
 @extends('layouts.site')
 
 @section('content')
-
     <!-- CAROUSEL -->
-    <x-header-banner :banners="$banners"/>
+    <x-header-banner :banners="$banners" />
 
     {{-- ABOUT  --}}
     <section id="about" class="bg-default">
@@ -42,23 +41,33 @@
             <div class="row">
                 <div class="col-md-4">
                     <h3><i class="fa fa-hashtag"></i> Notícias</h3>
+
+                    @if (count($articles))
+                        <ul class="p-0">
+                            <li>
+                                @foreach ($articles as $article)
+                                    <div>
+                                        <a href="{{ route('site.articles', ['slug' => $article->slug]) }}" class="text-decoration-none text-dark">{{ $article->title }}</a><br/>
+                                        <h6>{{ Str::limit($article->resume, $limit = 90, $end = '...') }}</h6>
+                                    </div>
+                                @endforeach
+                            </li>
+                        </ul>
+
+                        <a href="{{route('site.all-articles')}}" class="btn btn-high">→ Todas as notícias</a>
+                    @endif
+
                 </div>
                 <div class="col-md-4">
                     <h3><i class="fa fa-hashtag"></i> Fotos</h3>
                 </div>
                 <div class="col-md-4 text-center">
-                    
+
                     <h3><i class="fa fa-hashtag"></i> Facebook</h3>
 
-                    <div class="fb-page" 
-                        data-href="https://www.facebook.com/paideiaeducacionalpa/" 
-                        data-tabs="timeline"
-                        data-width=""
-                        data-height="460px" 
-                        data-small-header="false" 
-                        data-adapt-container-width="true" 
-                        data-hide-cover="false" 
-                        data-show-facepile="true">
+                    <div class="fb-page" data-href="https://www.facebook.com/paideiaeducacionalpa/" data-tabs="timeline"
+                        data-width="" data-height="460px" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
                         <blockquote cite="https://www.facebook.com/paideiaeducacionalpa/" class="fb-xfbml-parse-ignore">
                             <a href="https://www.facebook.com/paideiaeducacionalpa/">Paideia Educacional</a>
                         </blockquote>
@@ -109,8 +118,8 @@
                 <div class="col-md-6">
 
                     @if ($canal)
-                    <h3>{{ $canal->title }}</h3><br />
-                    {!! $canal->description !!}
+                        <h3>{{ $canal->title }}</h3><br />
+                        {!! $canal->description !!}
                     @endif
 
                 </div>
@@ -123,8 +132,8 @@
 
                         @foreach ($videos as $video)
                             <swiper-slide>
-                                <iframe width="430" height="370" src="{{ $video->url }}" title="{{ $video->title }}"
-                                    frameborder="0"
+                                <iframe width="430" height="370" src="{{ $video->url }}"
+                                    title="{{ $video->title }}" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowfullscreen>
                                 </iframe>

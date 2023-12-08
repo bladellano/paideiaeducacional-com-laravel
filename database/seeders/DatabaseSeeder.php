@@ -55,7 +55,7 @@ class DatabaseSeeder extends Seeder
 
         // Created multi banners
         \App\Models\Banner::factory()->create([
-            'title' => 'Primeiro Banner',            
+            'title' => 'Primeiro Banner',
             'slug' => 'primeiro-banner',
             'description' => 'Biltong pastrami buffalo, ribeye pork chop shank corned beef pancetta aliquip meatloaf',
             'image' => 'images/banners/banner-01.jpg',
@@ -130,5 +130,8 @@ class DatabaseSeeder extends Seeder
             <p>Em nosso canal no <a href="https://www.youtube.com/@paideiaeducacional6957" target="_blank">YouTube</a>, você encontrará uma extensa coleção de vídeos cuidadosamente elaborados por nossos educadores apaixonados. Desde aulas envolventes até dicas de estudo, passando por projetos educativos e eventos especiais, nosso objetivo é proporcionar uma experiência educacional única e acessível a todos.</p>',
             'user_id' => 1,
         ]);
+
+        // Created multi articles
+        \App\Models\Article::factory(10)->create();
     }
 }
