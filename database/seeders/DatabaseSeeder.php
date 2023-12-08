@@ -55,7 +55,7 @@ class DatabaseSeeder extends Seeder
 
         // Created multi banners
         \App\Models\Banner::factory()->create([
-            'title' => 'Primeiro Banner',
+            'title' => 'Primeiro Banner',            
             'slug' => 'primeiro-banner',
             'description' => 'Biltong pastrami buffalo, ribeye pork chop shank corned beef pancetta aliquip meatloaf',
             'image' => 'images/banners/banner-01.jpg',
@@ -64,6 +64,7 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Banner::factory()->create([
             'title' => 'Segundo Banner',
+            'show_title' => '1',
             'slug' => 'segundo-banner',
             'description' => 'Beef commodo est, shoulder elit frankfurter cupim nisi ipsum laboris strip steak pastrami consequat',
             'image' => 'images/banners/banner-02.jpg',

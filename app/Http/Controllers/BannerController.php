@@ -44,6 +44,8 @@ class BannerController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
+        $data['show_title'] = $request->get('show_title') == 'on' ? 1 : 0;
+
         // Lidar com o upload da imagem
         if ($request->hasFile('image'))
             $data['image'] = $request->file('image')->store('images/banners', 'public');
@@ -73,11 +75,14 @@ class BannerController extends Controller
      */
     public function update(Request $request, Banner $banner)
     {
+
         $data = $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+
+        $data['show_title'] = $request->get('show_title') == 'on' ? 1 : 0;
 
         // Lidar com o upload da imagem
         if ($request->hasFile('image')) {

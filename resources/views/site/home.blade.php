@@ -10,7 +10,9 @@
                 <li class="slideshow__item sq7-bg-light js-slideshow__item" style="background-image: url('{{ asset('storage/' . $b->image) }}');">
                     <div class='sq7-container sq7-max-width-sm'>
                         <div class='sq7-text-component sq7-text-center'>
-                            <h1><a href="{{ route('site.banners', ['slug' => $b->slug]) }}">{{ $b->title }}</a></h1>
+                            @if($b->show_title)
+                                <h1><a href="{{ route('site.banners', ['slug' => $b->slug]) }}">{{ $b->title }}</a></h1>
+                            @endif
                         </div>
                     </div>
                 </li>

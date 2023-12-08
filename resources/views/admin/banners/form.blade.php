@@ -3,14 +3,22 @@
 @csrf
 
 <div class="card-body">
+
     <div class="form-group">
 
         <label for="title">Título</label>
-        <input value="{{ $banner->title ?? old('title') }}" type="text" class="form-control" id="title" name="title">
+        <input value="{{ $banner->title ?? old('title') }}" type="text" class="form-control" id="title"
+            name="title">
         @error('title')
             <div class="text-danger">{{ $message }}</div>
         @enderror
 
+    </div>
+    <div class="form-group">
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="show_title" name="show_title" @if($banner->show_title == 1) checked @endif>
+            <label class="custom-control-label" for="show_title">Exibir o título do banner.</label>
+        </div>
     </div>
     <div class="form-group">
 
