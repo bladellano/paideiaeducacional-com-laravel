@@ -17,7 +17,14 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->create([
             'name' => 'Admin',
             'email' => 'bladellano@gmail.com',
-            'password' => Hash::make('12345678'),
+            'password' => Hash::make('nt1@2012'),
+        ]);
+
+         // Created at user
+         \App\Models\User::factory()->create([
+            'name' => 'William Borralho',
+            'email' => 'william@paideiaeducacional.com.br',
+            'password' => Hash::make('7aG78!'),
         ]);
 
         // Created multi videos

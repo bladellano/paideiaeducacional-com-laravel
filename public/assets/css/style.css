@@ -154,6 +154,21 @@ main {
 footer {
     position: relative;
     top: 75px;
+
+    .logo-paideia {
+        filter: brightness(0) invert(1);
+        max-width: 250px;
+    }
+
+    img:not(.logo-paideia) {
+        height: 100px;
+        object-fit: contain;
+        width: 98%;
+        padding: 4px;
+        background-color: #FFF;
+        border-radius: 6px;
+        margin: 4px 0;
+      }    
 }
 
 .move-up {
@@ -184,5 +199,5 @@ footer {
 }
 
 .developer{
-    color: var(--high-color);
+    color: var(--high-color)!important;
 }
