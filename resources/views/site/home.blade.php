@@ -70,13 +70,7 @@
 
                     <h3><i class="fa fa-hashtag"></i> Facebook</h3>
 
-                    <div class="fb-page" data-href="https://www.facebook.com/paideiaeducacionalpa/" data-tabs="timeline"
-                        data-width="" data-height="460px" data-small-header="false" data-adapt-container-width="true"
-                        data-hide-cover="false" data-show-facepile="true">
-                        <blockquote cite="https://www.facebook.com/paideiaeducacionalpa/" class="fb-xfbml-parse-ignore">
-                            <a href="https://www.facebook.com/paideiaeducacionalpa/">Paideia Educacional</a>
-                        </blockquote>
-                    </div>
+                    <div class="fb-page" data-href="https://www.facebook.com/paideiaeducacionalpa" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/paideiaeducacionalpa" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/paideiaeducacionalpa">Paideia Educacional</a></blockquote></div>
 
                 </div>
             </div>
