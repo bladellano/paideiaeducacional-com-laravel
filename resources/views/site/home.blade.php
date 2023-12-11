@@ -60,6 +60,11 @@
                 </div>
                 <div class="col-md-4">
                     <h3><i class="fa fa-hashtag"></i> Fotos</h3>
+
+                    <a href="https://www.flickr.com/photos/186651003@N06/" target="_blank">
+                        <img src="{{ asset('assets/images/galeria-de-fotos.jpg') }}" alt="Galeria" width="100%">
+                    </a>
+
                 </div>
                 <div class="col-md-4 text-center">
 
