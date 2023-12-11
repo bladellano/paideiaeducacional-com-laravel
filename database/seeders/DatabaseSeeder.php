@@ -133,5 +133,8 @@ class DatabaseSeeder extends Seeder
 
         // Created multi articles
         \App\Models\Article::factory(10)->create();
+
+        // Created multi testimonials
+        \App\Models\Testimonial::factory(5)->create();
     }
 }

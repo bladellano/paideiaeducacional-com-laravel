@@ -15,7 +15,7 @@
                                     <h4 class="card-title">
                                         <a href="{{ route('site.articles', ['slug' => $n->slug]) }}" class="text-decoration-none text-dark">{{ $n->title }}</a>
                                     </h4>
-                                    <h6 class="card-text">{{ $n->resume }}</h6>
+                                    <h6 class="text-secondary">{{ $n->resume }}</h6>
                                 </div>
                             </div>
                         @empty

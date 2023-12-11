@@ -7,6 +7,7 @@ use App\Models\Video;
 use App\Models\Banner;
 use App\Models\Page;
 use App\Models\Article;
+use App\Models\Testimonial;
 
 class SiteController extends Controller
 {
@@ -21,10 +22,12 @@ class SiteController extends Controller
 
         $articles = Article::latest()->limit(4)->get();
 
+        $testimonials = Testimonial::latest()->limit(3)->get();
+
         $sobre = Page::where('slug', 'assessoria-e-consultoria-em-projetos-educacionais-e-empresariais')->first();
         $canal =  Page::where('slug', 'seja-bem-vindo-ao-canal-da-paideia-educacional')->first();
 
-        return view('site.home', compact('events', 'videos', 'banners', 'sobre', 'canal','articles'));
+        return view('site.home', compact('events', 'videos', 'banners', 'sobre', 'canal', 'articles', 'testimonials'));
     }
 
     public function page($slug)

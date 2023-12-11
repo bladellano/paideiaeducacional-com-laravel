@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\BannerController;
-use App\Http\Controllers\VideoController;
-use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\VideoController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\TestimonialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,5 +46,6 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('banners', BannerController::class);
         Route::resource('videos', VideoController::class);
         Route::resource('articles', ArticleController::class);
+        Route::resource('testimonials', TestimonialController::class);
     });
 });

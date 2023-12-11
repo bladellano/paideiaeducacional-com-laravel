@@ -18,7 +18,7 @@ class ArticleFactory extends Factory
     public function definition()
     {
         $title = $this->faker->sentence;
-        $resume = $this->faker->paragraph;
+        $resume = $this->faker->sentence(6, true);
         $slug = Str::slug($title);
         $content = $this->faker->paragraphs(3, true);
         $image = $this->faker->imageUrl();
