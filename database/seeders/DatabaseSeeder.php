@@ -131,6 +131,14 @@ class DatabaseSeeder extends Seeder
             'user_id' => 1,
         ]);
 
+        \App\Models\Page::factory()->create([ //2
+            'title' => 'SEJA NOSSO PARCEIRO',
+            'slug' => 'seja-nosso-parceiro',
+            'description' => '<p>Estamos entusiasmados em convidar você para explorar oportunidades de parceria com a Paideia Educacional, uma instituição comprometida com a excelência educacional. Com sede em Ananindeua, no estado do Pará, e com foco especial nos interiores do estado, levamos nossa missão educacional a comunidades em toda a região.</p>
+            <p>Atuamos em diversas modalidades educacionais, oferecendo uma ampla variedade de cursos, incluindo profissionalizantes, Educação de Jovens e Adultos (EJA) para o Ensino Fundamental e Médio, cursos técnicos, graduação e pós-graduação. Nossa abrangência nos diferentes níveis de ensino nos permite impactar positivamente a vida de estudantes em todas as fases de sua jornada educacional.</p><p>Ao considerar uma colaboração conosco, você não apenas se beneficia da qualidade de nossa educação, mas também se une a uma comunidade que valoriza o crescimento, a inovação e o compromisso com o desenvolvimento integral dos alunos. Juntos, podemos construir um futuro educacional brilhante e impactante para os interiores do estado. Estamos ansiosos para discutir as muitas maneiras emocionantes de trabalharmos juntos.</p>',
+            'user_id' => 1,
+        ]);
+
         // Created multi articles
         \App\Models\Article::factory(10)->create();
 

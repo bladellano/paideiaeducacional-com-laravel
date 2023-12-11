@@ -5,7 +5,7 @@
     <x-header-banner :banners="$banners" />
 
     {{-- ABOUT  --}}
-    <section id="about" class="bg-default">
+    <section id="sobre" class="bg-default">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">

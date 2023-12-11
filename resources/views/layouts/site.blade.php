@@ -35,9 +35,9 @@
                 <div class="row py-2">
                     <div class="col-md-6 text-start">
                         <ul class="list-socials">
-                            <li><i class="fa fa-facebook"></i></li>
-                            <li><i class="fa fa-instagram"></i> </li>
-                            <li><i class="fa fa-youtube"></i> </li>
+                            <a href="https://www.facebook.com/paideiaeducacionalpa/" target="_blank"><li><i class="fa fa-facebook"></i></li></a>
+                            <a href="https://www.instagram.com/paideiaeducacional/" target="_blank"><li><i class="fa fa-instagram"></i></li></a>
+                            <a href="https://www.youtube.com/@paideiaeducacional6957" target="_blank"><li><i class="fa fa-youtube"></i></li></a>
                         </ul>
                     </div>
 
@@ -77,7 +77,7 @@
             </button>
             <div class="collapse navbar-collapse" id="nBarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-between w-100">
-                    <li class="nav-item"> <a class="nav-link active" href="#about">INSTITUCIONAL</a> </li>
+                    <li class="nav-item"> <a class="nav-link active" href="{{ route('site.home') }}#sobre">INSTITUCIONAL</a> </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -98,15 +98,15 @@
                             SERVICOS ON-LINE
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">AUTENTICIDADE DE SEU DOCUMENTO</a></li>
-                            <li><a class="dropdown-item" href="#">EMISSÃO 2ª VIA DO BOLETO</a></li>
-                            <li><a class="dropdown-item" href="#">PORTAL DO ALUNO</a></li>
-                            <li><a class="dropdown-item" href="#">BIBLIOTECA ON-LINE</a></li>
+                            <li><a class="dropdown-item" href="https://validar-certificado.paideiaeducacional.com" target="_blank">AUTENTICIDADE DE SEU DOCUMENTO</a></li>
+                            <li><a class="dropdown-item" href="https://paideiaeducacional.com.br/metodo/login.php" target="_blank">EMISSÃO 2ª VIA DO BOLETO</a></li>
+                            <li><a class="dropdown-item" href="https://paideiaeducacional.com.br/metodo/login.php" target="_blank">PORTAL DO ALUNO</a></li>
+                            <li><a class="dropdown-item" href="https://paideiaeducacional.com.br/metodo/login.php" target="_blank">BIBLIOTECA ON-LINE</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">RADIO WEB</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="https://www.paideiaeducacional.net/" target="_blank">RADIO WEB</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="#events">EVENTOS</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">SEJA NOSSO PARCEIRO</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('site.home') }}/seja-nosso-parceiro">SEJA NOSSO PARCEIRO</a> </li>
                     <li class="nav-item"> <a class="nav-link btn-high" href="#contact">FALE CONOSCO</a> </li>
                 </ul>
             </div>
