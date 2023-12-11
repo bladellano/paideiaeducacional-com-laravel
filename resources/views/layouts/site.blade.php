@@ -123,7 +123,7 @@
                     <li class="nav-item"> <a class="nav-link" href="#events">EVENTOS</a> </li>
                     <li class="nav-item"> <a class="nav-link"
                             href="{{ route('site.home') }}/seja-nosso-parceiro">SEJA NOSSO PARCEIRO</a> </li>
-                    <li class="nav-item"> <a class="nav-link btn-high" href="#contact">FALE CONOSCO</a> </li>
+                    <li class="nav-item"> <a class="nav-link btn-high" href="{{ route('site.home') }}#fale-conosco">FALE CONOSCO</a> </li>
                 </ul>
             </div>
         </div>
