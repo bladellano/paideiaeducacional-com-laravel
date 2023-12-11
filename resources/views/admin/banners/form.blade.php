@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
         <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="show_title" name="show_title" @if($banner->show_title == 1) checked @endif>
+            <input type="checkbox" class="custom-control-input" id="show_title" name="show_title" @if( isset($banner) && $banner->show_title == 1) checked @endif>
             <label class="custom-control-label" for="show_title">Exibir o título do banner.</label>
         </div>
     </div>
