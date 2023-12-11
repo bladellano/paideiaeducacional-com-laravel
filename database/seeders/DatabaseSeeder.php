@@ -63,10 +63,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Banner::factory()->create([
-            'title' => 'Segundo Banner',
+            'title' => 'Descubra o caminho para o sucesso acadêmico e pessoal na Paideia Educacional.',
             'show_title' => '1',
             'slug' => 'segundo-banner',
-            'description' => 'Beef commodo est, shoulder elit frankfurter cupim nisi ipsum laboris strip steak pastrami consequat',
+            'description' => '<p>Junte-se a nós nesta jornada extraordinária de aprendizado e crescimento. Matricule-se agora e faça parte de uma comunidade comprometida com a excelência educacional e o desenvolvimento integral dos nossos alunos!</p>',
             'image' => 'images/banners/banner-02.jpg',
             'user_id' => 1,
         ]);
