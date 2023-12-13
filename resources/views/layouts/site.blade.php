@@ -94,12 +94,14 @@
                             CURSOS
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">PROFISSIONALIZANTES</a></li>
-                            <li><a class="dropdown-item" href="#">EJA FUNDAMENTAL</a></li>
-                            <li><a class="dropdown-item" href="#">EJA MÉDIO</a></li>
-                            <li><a class="dropdown-item" href="#">TÉCNICO</a></li>
-                            <li><a class="dropdown-item" href="#">GRADUAÇÃO</a></li>
-                            <li><a class="dropdown-item" href="#">PÓS-GRADUAÇÃO</a></li>
+                            <li><a class="dropdown-item" href="#" target="https://paideiaeducacional.com.br/loja_virtual/index.php">PROFISSIONALIZANTES</a></li>
+                            <li><a class="dropdown-item" href="#" target="https://paideiaeducacional.ead.guru/cursos/eja-ensino-fundamental/bundle/">EJA FUNDAMENTAL</a></li>
+                            <li><a class="dropdown-item" href="#" target="https://paideiaeducacional.ead.guru/cursos/eja-ensino-medio/bundle/">EJA MÉDIO</a></li>
+                            <li><a class="dropdown-item" href="#" target="https://paideiaeducacional.ead.guru/ead/enroll/secretaria-escolar">CURSO TÉCNICO SECRETARIA ESCOLAR</a></li>
+                            <li><a class="dropdown-item" href="#" target="https://paideiaeducacional.ead.guru/ead/enroll/tecnico-em-transacoes-imobiliaria/">CURSO TÉCNICO TRANSAÇÕES IMOBILIÁRIAS</a></li>
+                            <li><a class="dropdown-item" href="#" target="https://paideiaeducacional.com.br/loja_virtual/index.php">TÉCNICO</a></li>
+                            <li><a class="dropdown-item" href="#" target="https://unibtadigital.com.br/graduacoes">GRADUAÇÃO</a></li>
+                            <li><a class="dropdown-item" href="#" target="https://unibtadigital.com.br/pos-graduacoes">PÓS-GRADUAÇÃO</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -110,11 +112,11 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="https://validar-certificado.paideiaeducacional.com"
                                     target="_blank">AUTENTICIDADE DE SEU DOCUMENTO</a></li>
-                            <li><a class="dropdown-item" href="https://paideiaeducacional.com.br/metodo/login.php"
+                            <li><a class="dropdown-item" href="https://banco.bradesco/html/classic/produtos-servicos/mais-produtos-servicos/segunda-via-boleto.shtm"
                                     target="_blank">EMISSÃO 2ª VIA DO BOLETO</a></li>
                             <li><a class="dropdown-item" href="https://paideiaeducacional.com.br/metodo/login.php"
                                     target="_blank">PORTAL DO ALUNO</a></li>
-                            <li><a class="dropdown-item" href="https://paideiaeducacional.com.br/metodo/login.php"
+                            <li><a class="dropdown-item" href="https://bndigital.bn.gov.br/"
                                     target="_blank">BIBLIOTECA ON-LINE</a></li>
                         </ul>
                     </li>
