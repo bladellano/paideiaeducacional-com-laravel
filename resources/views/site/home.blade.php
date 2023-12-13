@@ -40,22 +40,19 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <h3><i class="fa fa-hashtag"></i> Notícias</h3>
+                    <h3><i class="fa fa-hashtag"></i> Últimas Notícias</h3>
 
-                    @if (count($articles))
-                        <ul class="p-0">
-                            <li>
-                                @foreach ($articles as $article)
-                                    <div>
-                                        <a href="{{ route('site.articles', ['slug' => $article->slug]) }}" class="text-decoration-none text-dark fw-bold">{{ $article->title }}</a><br/>
-                                        <h6 class="text-secondary">{{ Str::limit($article->resume, $limit = 90, $end = '...') }}</h6>
-                                    </div>
-                                @endforeach
-                            </li>
-                        </ul>
-
-                        <a href="{{route('site.all-articles')}}" class="btn btn-high">→ Todas as notícias</a>
-                    @endif
+                    <ul class="p-0">
+                        <li>
+                            @foreach ($rssItems as $r)
+                                <div>
+                                    <p> <span class="badge bg-secondary">{{ $r->get_date('j M Y | g:i a') }}</span> {{ Str::limit($r->get_title(), $limit = 90, $end = '...') }} 
+                                        <a href="{{ $r->get_permalink() }}" class="btn btn-sm btn-high" target="_blank">Leia mais</a>
+                                    </p>
+                                </div>
+                            @endforeach
+                        </li>
+                    </ul>
 
                 </div>
                 <div class="col-md-4">

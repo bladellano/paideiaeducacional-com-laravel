@@ -27,7 +27,9 @@ class SiteController extends Controller
         $sobre = Page::where('slug', 'assessoria-e-consultoria-em-projetos-educacionais-e-empresariais')->first();
         $canal =  Page::where('slug', 'seja-bem-vindo-ao-canal-da-paideia-educacional')->first();
 
-        return view('site.home', compact('events', 'videos', 'banners', 'sobre', 'canal', 'articles', 'testimonials'));
+        $rssItems = (new \App\Services\RssService)->getRssFeed();
+
+        return view('site.home', compact('events', 'videos', 'banners', 'sobre', 'canal', 'articles', 'testimonials', 'rssItems'));
     }
 
     public function page($slug)
