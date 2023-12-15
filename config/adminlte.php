@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminPDE',
+    'title' => '👨‍🔧 Gerenciador de Conteúdo',
     'title_prefix' => '',
     'title_postfix' => '',
 

@@ -25,7 +25,7 @@
         src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v18.0&appId=374800873744481" nonce="kWpBy904">
     </script>
 
-    <title>Paideia Educacional</title>
+    <title>Paideia Educacional - Sua Jornada para o Conhecimento</title>
 </head>
 
 <body>
