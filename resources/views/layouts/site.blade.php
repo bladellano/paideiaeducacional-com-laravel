@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="{{ asset('assets/css/carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/multilevel-menu.css') }}">
 
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
 
@@ -97,11 +98,14 @@
                             <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.com.br/loja_virtual/index.php">PROFISSIONALIZANTES</a></li>
                             <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/cursos/eja-ensino-fundamental/bundle/">EJA FUNDAMENTAL</a></li>
                             <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/cursos/eja-ensino-medio/bundle/">EJA MÉDIO</a></li>
-                            <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/ead/enroll/secretaria-escolar">CURSO TÉCNICO SECRETARIA ESCOLAR</a></li>
-                            <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/ead/enroll/tecnico-em-transacoes-imobiliaria/">CURSO TÉCNICO TRANSAÇÕES IMOBILIÁRIAS</a></li>
-                            <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.com.br/loja_virtual/index.php">TÉCNICO</a></li>
                             <li><a class="dropdown-item" target="_blank" href="https://unibtadigital.com.br/graduacoes">GRADUAÇÃO</a></li>
                             <li><a class="dropdown-item" target="_blank" href="https://unibtadigital.com.br/pos-graduacoes">PÓS-GRADUAÇÃO</a></li>
+                            <li><a class="dropdown-item" href="#">TÉCNICO &raquo; </a>
+                                <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/ead/enroll/secretaria-escolar">CURSO TÉCNICO SECRETARIA ESCOLAR</a></li>
+                                    <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/ead/enroll/tecnico-em-transacoes-imobiliaria/">CURSO TÉCNICO TRANSAÇÕES IMOBILIÁRIAS</a></li>
+                              </ul>
+                           </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -212,6 +216,7 @@
     <script src="{{ asset('assets/js/carousel.js') }}"></script>
 
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/multilevel-menu.js') }}"></script>
 
 </body>
 

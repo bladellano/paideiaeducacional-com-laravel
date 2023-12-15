@@ -88,10 +88,6 @@ body {
     font-size: 1.0rem;
 }
 
-.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
 /* Certifique-se de que o dropdown não seja exibido por padrão */
 .dropdown-menu {
     display: none;
