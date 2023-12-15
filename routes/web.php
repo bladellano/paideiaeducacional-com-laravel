@@ -30,7 +30,7 @@ Route::get('/noticia/{slug}', [SiteController::class, 'article'])->name('site.ar
 Route::get('/todas-as-noticias', [SiteController::class, 'allArticles'])->name('site.all-articles');
 
 Route::get('/{slug}', [SiteController::class, 'page'])
-->where('slug', '^(?!admin|login).*|^(admin|login)?$') // Permite vazias, 'admin' ou 'login'
+->where('slug', '^(?!admin|login|register).*|^(admin|login|register)?$') // Permite vazias, 'admin' ou 'login'
 ->name('site.pages');
 
 Auth::routes();

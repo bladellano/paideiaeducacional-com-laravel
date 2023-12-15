@@ -411,6 +411,11 @@ return [
                 ],
             ],
         ],
+        [
+            'text'       => 'Registrar Usuário',
+            'icon_color' => 'cyan',
+            'url'        => env('APP_URL') .'/register',
+        ],
         // Fim da customização
 
         // ['header' => 'account_settings'],
