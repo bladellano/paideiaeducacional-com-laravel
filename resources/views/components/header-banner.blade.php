@@ -1,4 +1,4 @@
-<div class="slideshow js-slideshow" data-swipe="on">
+<div class="slideshow js-slideshow" data-swipe="on" data-autoplay="on">
 
     <ul class="slideshow__content">
 

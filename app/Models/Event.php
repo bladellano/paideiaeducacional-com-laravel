@@ -18,11 +18,6 @@ class Event extends Model
         return $this->belongsTo(User::class);
     }
 
-    // public function getEventDateAttribute($value)
-    // {
-    //     return Carbon::parse($value)->format('d/m/Y');
-    // }
-
     protected static function boot()
     {
         parent::boot();
@@ -32,7 +27,7 @@ class Event extends Model
         });
 
         static::creating(function ($event) {
-            
+
             $event->slug = Str::slug($event->title);
 
             if (auth()->check())

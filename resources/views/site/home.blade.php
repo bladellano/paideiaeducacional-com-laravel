@@ -46,8 +46,8 @@
                         <li>
                             @foreach ($rssItems as $r)
                                 <div>
-                                    <p> <span class="badge bg-secondary">{{ $r->get_date('j M Y | g:i a') }}</span> {{ Str::limit($r->get_title(), $limit = 90, $end = '...') }} 
-                                        <a href="{{ $r->get_permalink() }}" class="btn btn-sm btn-high" target="_blank">Leia mais</a>
+                                    <p> <span class="badge" style="background:#C4170C">{{ $r->get_date('j/m/Y') }}</span> {{ Str::limit($r->get_title(), $limit = 90, $end = '...') }} 
+                                        <a href="{{ $r->get_permalink() }}" class="link-primary" target="_blank"><small>&raquo; Leia mais</small></a>
                                     </p>
                                 </div>
                             @endforeach
@@ -88,7 +88,7 @@
                             <swiper-slide>
                                 <p><a href="{{ route('site.events', ['slug' => $event->slug]) }}">{{ $event->title }}</a>
                                 </p>
-                                <span>{{ $event->event_date }}</span>
+                                <span>{{ \Carbon\Carbon::parse($event->event_date)->format('d/m/Y') }}</span>
                                 <img src="{{ asset('storage/' . $event->image) }}" alt="{{ $event->title }}">
                             </swiper-slide>
                         @endforeach

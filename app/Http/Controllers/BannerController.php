@@ -45,6 +45,7 @@ class BannerController extends Controller
         ]);
 
         $data['show_title'] = $request->get('show_title') == 'on' ? 1 : 0;
+        $data['show_title'] = (string) $data['show_title'];
 
         // Lidar com o upload da imagem
         if ($request->hasFile('image'))
@@ -83,6 +84,7 @@ class BannerController extends Controller
         ]);
 
         $data['show_title'] = $request->get('show_title') == 'on' ? 1 : 0;
+        $data['show_title'] = (string) $data['show_title'];
 
         // Lidar com o upload da imagem
         if ($request->hasFile('image')) {
