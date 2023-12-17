@@ -66,9 +66,9 @@
                     </div>
                     <div class="col-md-6 text-end my-auto mt-2">
                         <ul class="contact-list">
-                            <li><i class="fa fa-whatsapp"></i> (91) 3722-9891</li>
+                            <li>(91) 3722-9891</li>
                             <li><i class="fa fa-whatsapp"></i> (91) 9 8176-9979</li>
-                            <li>(91) 9 8208-4651</li>
+                            <li><i class="fa fa-whatsapp"></i> (91) 9 8208-4651</li>
                             <li><i class="fa fa-envelope-o"></i> contato@paideiaeducacional.com</li>
                         </ul>
                     </div>
