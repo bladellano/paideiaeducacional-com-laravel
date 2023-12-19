@@ -398,16 +398,12 @@ return [
             ],
         ],
         [
-            'text'    => 'Fotos',
+            'text'    => 'Galeria',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'Todos',
-                    'url'  => 'admin/photos',
-                ],
-                [
                     'text' => 'Criar',
-                    'url'  => 'admin/photos/create',
+                    'url'  => 'admin/image-gallery/create',
                 ],
             ],
         ],

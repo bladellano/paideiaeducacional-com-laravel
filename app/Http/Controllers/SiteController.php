@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
 use App\Models\Event;
 use App\Models\Video;
 use App\Models\Banner;
-use App\Models\Page;
 use App\Models\Article;
 use App\Models\Testimonial;
+use App\Models\ImageGallery;
 
 class SiteController extends Controller
 {
@@ -28,8 +29,10 @@ class SiteController extends Controller
         $canal =  Page::where('slug', 'seja-bem-vindo-ao-canal-da-paideia-educacional')->first();
 
         $rssItems = (new \App\Services\RssService)->getRssFeed();
+        
+        $gallery = ImageGallery::get();
 
-        return view('site.home', compact('events', 'videos', 'banners', 'sobre', 'canal', 'articles', 'testimonials', 'rssItems'));
+        return view('site.home', compact('events', 'videos', 'banners', 'sobre', 'canal', 'articles', 'testimonials', 'rssItems','gallery'));
     }
 
     public function page($slug)

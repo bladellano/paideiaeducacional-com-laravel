@@ -1,5 +1,11 @@
 $(function () {
 
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+
+    });
+
     // MOVE-UP
     $(window).scroll(() => {
         if ($(this).scrollTop() > 0)

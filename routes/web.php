@@ -9,6 +9,7 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\ImageGalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,5 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('videos', VideoController::class);
         Route::resource('articles', ArticleController::class);
         Route::resource('testimonials', TestimonialController::class);
+        Route::resource('image-gallery', ImageGalleryController::class);
+
     });
 });

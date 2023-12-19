@@ -58,15 +58,18 @@
                 <div class="col-md-4">
                     <h3><i class="fa fa-hashtag"></i> Fotos</h3>
 
-                    <a href="https://www.flickr.com/photos/186651003@N06/" target="_blank">
-                        <img src="{{ asset('assets/images/galeria-de-fotos.jpg') }}" alt="Galeria" width="100%">
-                    </a>
+                    <div class="gallery">
+                        @foreach ($gallery as $g)
+                            <a class="fancybox" rel="ligthbox" href="{{ asset('storage/' . $g->image) }}">
+                                <img class="img-thumbnail" alt="" src="{{ asset('storage/' . $g->image) }}" />
+                            </a>
+                        @endforeach
+                    </div>
 
                 </div>
+
                 <div class="col-md-4 text-center">
-
                     <h3><i class="fa fa-hashtag"></i> Facebook</h3>
-
                     <div class="fb-page" data-href="https://www.facebook.com/paideiaeducacionalpa" data-tabs="timeline" data-width="" data-height="418px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/paideiaeducacionalpa" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/paideiaeducacionalpa">Paideia Educacional</a></blockquote></div>
 
                 </div>

@@ -151,5 +151,52 @@ class DatabaseSeeder extends Seeder
 
         // Created multi testimonials
         \App\Models\Testimonial::factory(5)->create();
+
+         // Created multi gallery
+         \App\Models\ImageGallery::factory()->create([
+            'title' => '49485013838_856be66f1d_c',
+            'image' => 'images/gallery/49485013838_856be66f1d_c.jpg',
+        ]);
+        
+        \App\Models\ImageGallery::factory()->create([
+            'title' => '49485717827_70fcaa1a34_c',
+            'image' => 'images/gallery/49485717827_70fcaa1a34_c.jpg',
+        ]);
+        
+        \App\Models\ImageGallery::factory()->create([
+            'title' => '49485503136_7f4971c28d_c',
+            'image' => 'images/gallery/49485503136_7f4971c28d_c.jpg',
+        ]);
+        
+        \App\Models\ImageGallery::factory()->create([
+            'title' => '49485717967_1df3de69e9_c',
+            'image' => 'images/gallery/49485717967_1df3de69e9_c.jpg',
+        ]);
+        
+        \App\Models\ImageGallery::factory()->create([
+            'title' => '49485718002_9007d92a00_c',
+            'image' => 'images/gallery/49485718002_9007d92a00_c.jpg',
+        ]);
+        
+        \App\Models\ImageGallery::factory()->create([
+            'title' => '49485704322_78c89e9f93_c',
+            'image' => 'images/gallery/49485704322_78c89e9f93_c.jpg',
+        ]);
+        
+        \App\Models\ImageGallery::factory()->create([
+            'title' => '49485001013_9575115bce_c',
+            'image' => 'images/gallery/49485001013_9575115bce_c.jpg',
+        ]);
+        
+        \App\Models\ImageGallery::factory()->create([
+            'title' => '49485001053_27b0f471e7_c',
+            'image' => 'images/gallery/49485001053_27b0f471e7_c.jpg',
+        ]);
+        
+        \App\Models\ImageGallery::factory()->create([
+            'title' => '49485001228_1497378365_c',
+            'image' => 'images/gallery/49485001228_1497378365_c.jpg',
+        ]);
+
     }
 }
