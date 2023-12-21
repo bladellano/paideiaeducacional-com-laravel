@@ -164,27 +164,41 @@
                             <li class="text-white"><i class="fa fa-envelope"></i> contato@paideiaeducacional.com</li>
                             <li class="text-white"><i class="fa fa-phone"></i> +55 91 3722-9891</li>
                         </ul>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.68015789797!2d-48.409596924353416!3d-1.3685904986184594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a46002e36706d5%3A0x4c36bf75461dcb48!2sTv.%20We%20Quinze%20A%20Cj%20Cidade%20Nova%20III%2C%20112%20-%20Cidade%20Nova%2C%20Ananindeua%20-%20PA%2C%2067130-665%2C%20Brasil!5e0!3m2!1spt-PT!2spt!4v1702322090788!5m2!1spt-PT!2spt" width="100%" height="274" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.68015789797!2d-48.409596924353416!3d-1.3685904986184594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a46002e36706d5%3A0x4c36bf75461dcb48!2sTv.%20We%20Quinze%20A%20Cj%20Cidade%20Nova%20III%2C%20112%20-%20Cidade%20Nova%2C%20Ananindeua%20-%20PA%2C%2067130-665%2C%20Brasil!5e0!3m2!1spt-PT!2spt!4v1702322090788!5m2!1spt-PT!2spt" width="100%" height="312" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
             
                     <!-- Formulário de Contato -->
                     <div class="col-md-6">
-                        <form>
+                        
+                        @if(Session::has('message'))
+                            <div class="alert alert-success">
+                                {{ Session::get('message') }}
+                            </div>
+                        @endif
+
+                        <form action="{{ route('site.send-mail') }}" method="post">
+
+                            @csrf
+
                             <div class="mb-3">
                                 <label for="nome" class="form-label text-white">Nome</label>
-                                <input type="text" class="form-control" id="nome" name="nome" required>
+                                <input type="text" class="form-control" id="name" name="name" required>
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label text-white">Email</label>
+                                <label for="email" class="form-label text-white">E-mail</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="mb-3">
+                                <label for="whatsapp" class="form-label text-white">Whatsapp</label>
+                                <input type="text" class="form-control" id="whatsapp" name="whatsapp" required>
+                            </div>
+                            <div class="mb-3">
                                 <label for="assunto" class="form-label text-white">Assunto</label>
-                                <input type="text" class="form-control" id="assunto" name="assunto" required>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
                             </div>
                             <div class="mb-3">
                                 <label for="mensagem" class="form-label text-white">Mensagem</label>
-                                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-high">Enviar Mensagem</button>
                         </form>

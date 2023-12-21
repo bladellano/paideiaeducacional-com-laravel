@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\EventController;
@@ -21,6 +22,8 @@ use App\Http\Controllers\ImageGalleryController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('send-mail', [MailController::class, 'index'])->name('site.send-mail');
 
 Route::get('/', [SiteController::class, 'home'])->name('site.home');
 
