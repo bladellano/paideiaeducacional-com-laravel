@@ -46,8 +46,8 @@
                         <li>
                             @foreach ($rssItems as $r)
                                 <div>
-                                    <p> <span class="badge" style="background:#C4170C">{{ $r->get_date('j/m/Y') }}</span> {{ Str::limit($r->get_title(), $limit = 90, $end = '...') }} 
-                                        <a href="{{ $r->get_permalink() }}" class="link-primary" target="_blank"><small>&raquo; Leia mais</small></a>
+                                    <p> <span class="badge" style="background:#7f9c97">{{ $r->get_date('j/m/Y') }}</span> {{ Str::limit($r->get_title(), $limit = 90, $end = '...') }} 
+                                        <a href="{{ $r->get_permalink() }}" class="btn btn-sm btn-light" target="_blank">&raquo; Leia mais</a>
                                     </p>
                                 </div>
                             @endforeach
@@ -58,12 +58,10 @@
                 <div class="col-md-4">
                     <h3><i class="fa fa-hashtag"></i> Fotos</h3>
 
-                    <div class="gallery">
-                        @foreach ($gallery as $g)
-                            <a class="fancybox" rel="ligthbox" href="{{ asset('storage/' . $g->image) }}">
-                                <img class="img-thumbnail" alt="" src="{{ asset('storage/' . $g->image) }}" />
-                            </a>
-                        @endforeach
+                    <x-images-gallery :gallery="$gallery"/>
+                    
+                    <div class="text-center">
+                        <a href="{{ route('site.all-images-gallery') }}" class="btn btn-sm btn-light">» Mais fotos</a>
                     </div>
 
                 </div>

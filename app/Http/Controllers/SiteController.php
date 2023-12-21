@@ -30,7 +30,7 @@ class SiteController extends Controller
 
         $rssItems = (new \App\Services\RssService)->getRssFeed();
         
-        $gallery = ImageGallery::get();
+        $gallery = ImageGallery::latest()->limit(9)->get();
 
         return view('site.home', compact('events', 'videos', 'banners', 'sobre', 'canal', 'articles', 'testimonials', 'rssItems','gallery'));
     }
@@ -63,5 +63,11 @@ class SiteController extends Controller
     {
         $articles = Article::all();
         return view('site.all-articles', compact('articles'));
+    }
+
+    public function allImagesGallery()
+    {
+        $gallery = ImageGallery::all();
+        return view('site.all-images-gallery', compact('gallery'));
     }
 }
