@@ -222,6 +222,13 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
+    <a 
+        href="https://api.whatsapp.com/send?phone=5591981769979&text=Olá!" 
+        target="_blank"
+        style="position:fixed;bottom:34px;right:26px;">
+        <img src="{{ asset('assets/images/whatsapp.svg') }}" alt="Whatsapp" width="50">
+    </a>
+
 </body>
 
 </html>
