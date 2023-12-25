@@ -205,7 +205,6 @@ class DatabaseSeeder extends Seeder
             'aBW7hRhV2n2TIgyKUNHdLrAbXwZtJROAGKrXvGwI.jpg',
             'B3US9dAdB0UlNqa7zQDVplmfa941S8vwjrneMtvY.jpg',
             'bMrd9gqByhtYj5t0Mm4BLdoMPSRbneHqhwZMsXBE.jpg',
-            'CSsWR9uLK0jOHLfj8q7PBytqSwCerQEoKOutb5GB.jpg',
             'J27ztmRzBJmXi3r4VQiBEVv6jnAbLSvZOGiadJtd.jpg',
             'jUSS4Z7FEeYJt23uy21xg3TD15SjOoPNRnsVg5wa.jpg',
             'OJqLxVNsE3K3tCjtgTDOD2RFheAH5mFGbwIbyPN9.jpg',
