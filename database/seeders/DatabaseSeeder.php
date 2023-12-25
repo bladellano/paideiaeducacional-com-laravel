@@ -62,6 +62,15 @@ class DatabaseSeeder extends Seeder
 
         // Created multi banners
         \App\Models\Banner::factory()->create([
+            'title' => 'Feliz Natal e um Próspero Ano Novo',
+            'show_title' => '0',
+            'slug' => 'segundo-banner',
+            'description' => '<p>Feliz Natal e um Próspero Ano Novo</p>',
+            'image' => 'images/banners/VyOhZJMgKngILio23gAl7tBCZTI7iMXVOttsApBJ.jpg',
+            'user_id' => 1,
+        ]);
+
+        \App\Models\Banner::factory()->create([
             'title' => 'Primeiro Banner',
             'slug' => 'primeiro-banner',
             'description' => 'Biltong pastrami buffalo, ribeye pork chop shank corned beef pancetta aliquip meatloaf',
@@ -79,6 +88,15 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Created multi events
+        \App\Models\Event::factory()->create([
+            'title' => 'ITAITUBA 167 ANOS',
+            'slug' => 'itaituba-167-anos',
+            'description' => '<p>Em meio à expectativa fervilhante, a cidade de Itaituba se prepara para celebrar com entusiasmo e orgulho o grandioso marco de seus 167 anos de existência. Este evento, mais do que uma simples comemoração, representa um momento ímpar para refletirmos sobre a rica história, os progressos alcançados e os laços comunitários que moldaram essa cidade única ao longo das décadas</p>',
+            'event_date' => '2023-12-15',
+            'image' => 'images/events/QE0XobRF1NVJfa4i3DwOxcvyKZqNzlmUho4QZ7eJ.jpg',
+            'user_id' => 1,
+        ]);
+
         \App\Models\Event::factory()->create([
             'title' => 'Vendas Poderoas Kotaro Tuji - Santarém',
             'slug' => 'vendas-poderosas-kotaro-tuji-santarem',
@@ -171,50 +189,36 @@ class DatabaseSeeder extends Seeder
         \App\Models\Testimonial::factory(1)->create();
 
         // Created multi gallery
-        \App\Models\ImageGallery::factory()->create([
-            'title' => '49485013838_856be66f1d_c',
-            'image' => 'images/gallery/49485013838_856be66f1d_c.jpg',
-        ]);
+        $files = [
+            '49485001013_9575115bce_c.jpg',
+            '49485001053_27b0f471e7_c.jpg',
+            '49485001228_1497378365_c.jpg',
+            '49485013838_856be66f1d_c.jpg',
+            '49485503136_7f4971c28d_c.jpg',
+            '49485704322_78c89e9f93_c.jpg',
+            '49485717827_70fcaa1a34_c.jpg',
+            '49485717967_1df3de69e9_c.jpg',
+            '49485718002_9007d92a00_c.jpg',
+            '5LDkZj2NdRYFI4kaAgyWzPwlvLi1GPeP5VGSPtDq.jpg',
+            '68JgDuRtn5HoAKeQPCnJZkcDNdkXh3OPcdu5xgYG.jpg',
+            'A0Fw65M2cjtiu1GAcglkBDpmmWStTBREsBz7Nr1x.jpg',
+            'aBW7hRhV2n2TIgyKUNHdLrAbXwZtJROAGKrXvGwI.jpg',
+            'B3US9dAdB0UlNqa7zQDVplmfa941S8vwjrneMtvY.jpg',
+            'bMrd9gqByhtYj5t0Mm4BLdoMPSRbneHqhwZMsXBE.jpg',
+            'CSsWR9uLK0jOHLfj8q7PBytqSwCerQEoKOutb5GB.jpg',
+            'J27ztmRzBJmXi3r4VQiBEVv6jnAbLSvZOGiadJtd.jpg',
+            'jUSS4Z7FEeYJt23uy21xg3TD15SjOoPNRnsVg5wa.jpg',
+            'OJqLxVNsE3K3tCjtgTDOD2RFheAH5mFGbwIbyPN9.jpg',
+            'OkOxYhOBPsnfeWvgqGXQ80WmCceVaMEYriF9Dpzx.jpg',
+            'UBhdhtJKGkLUJaa5ItLuVGGTIONPmc2DOtWBZxTY.jpg',
+        ];
         
-        \App\Models\ImageGallery::factory()->create([
-            'title' => '49485717827_70fcaa1a34_c',
-            'image' => 'images/gallery/49485717827_70fcaa1a34_c.jpg',
-        ]);
-        
-        \App\Models\ImageGallery::factory()->create([
-            'title' => '49485503136_7f4971c28d_c',
-            'image' => 'images/gallery/49485503136_7f4971c28d_c.jpg',
-        ]);
-        
-        \App\Models\ImageGallery::factory()->create([
-            'title' => '49485717967_1df3de69e9_c',
-            'image' => 'images/gallery/49485717967_1df3de69e9_c.jpg',
-        ]);
-        
-        \App\Models\ImageGallery::factory()->create([
-            'title' => '49485718002_9007d92a00_c',
-            'image' => 'images/gallery/49485718002_9007d92a00_c.jpg',
-        ]);
-        
-        \App\Models\ImageGallery::factory()->create([
-            'title' => '49485704322_78c89e9f93_c',
-            'image' => 'images/gallery/49485704322_78c89e9f93_c.jpg',
-        ]);
-        
-        \App\Models\ImageGallery::factory()->create([
-            'title' => '49485001013_9575115bce_c',
-            'image' => 'images/gallery/49485001013_9575115bce_c.jpg',
-        ]);
-        
-        \App\Models\ImageGallery::factory()->create([
-            'title' => '49485001053_27b0f471e7_c',
-            'image' => 'images/gallery/49485001053_27b0f471e7_c.jpg',
-        ]);
-        
-        \App\Models\ImageGallery::factory()->create([
-            'title' => '49485001228_1497378365_c',
-            'image' => 'images/gallery/49485001228_1497378365_c.jpg',
-        ]);
+        foreach ($files as $file) {
+            \App\Models\ImageGallery::factory()->create([
+                'title' => $file,
+                'image' => 'images/gallery/' . $file,
+            ]);
+        }
 
     }
 }
