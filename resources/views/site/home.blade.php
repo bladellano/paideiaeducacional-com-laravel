@@ -184,14 +184,23 @@
                                 <label for="nome" class="form-label text-white">Nome</label>
                                 <input type="text" class="form-control" id="name" name="name" required>
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label text-white">E-mail</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label text-white">E-mail</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="whatsapp" class="form-label text-white">Whatsapp</label>
+                                        <input type="text" class="form-control" id="whatsapp" name="whatsapp" required>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="whatsapp" class="form-label text-white">Whatsapp</label>
-                                <input type="text" class="form-control" id="whatsapp" name="whatsapp" required>
-                            </div>
+                     
                             <div class="mb-3">
                                 <label for="assunto" class="form-label text-white">Assunto</label>
                                 <input type="text" class="form-control" id="subject" name="subject" required>
@@ -200,7 +209,8 @@
                                 <label for="mensagem" class="form-label text-white">Mensagem</label>
                                 <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-high">Enviar Mensagem</button>
+                            <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_CLIENT') }}"></div>
+                            <button type="submit" class="btn btn-high mt-2">Enviar Mensagem</button>
                         </form>
                     </div>
                 </div>
@@ -245,3 +255,9 @@
     </section>
     
 @endsection
+
+@if(session('fragment'))
+    <script>
+        window.location.hash = '{{ session('fragment') }}';
+    </script>
+@endif

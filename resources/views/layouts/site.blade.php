@@ -21,6 +21,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
 
     <div id="fb-root"></div>
