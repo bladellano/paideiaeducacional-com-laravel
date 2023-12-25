@@ -225,7 +225,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
     <a 
-        href="https://api.whatsapp.com/send?phone=5591981769979&text=Olá!" 
+        href="https://web.whatsapp.com/send?phone=5591981769979&text=Olá! Espero que esteja bem. Estou interessado em esclarecer algumas dúvidas sobre os serviços oferecidos por vocês. Seria possível contar com a sua ajuda?" 
         target="_blank"
         style="position:fixed;bottom:34px;right:26px;">
         <img src="{{ asset('assets/images/whatsapp.svg') }}" alt="Whatsapp" width="50">
