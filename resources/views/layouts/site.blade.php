@@ -106,8 +106,8 @@
                             <li><a class="dropdown-item" target="_blank" href="https://unibtadigital.com.br/pos-graduacoes">PÓS-GRADUAÇÃO</a></li>
                             <li><a class="dropdown-item" href="#">TÉCNICO &raquo; </a>
                                 <ul class="submenu dropdown-menu">
-                                    <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/ead/enroll/secretaria-escolar">SECRETARIA ESCOLAR</a></li>
-                                    <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/ead/enroll/tecnico-em-transacoes-imobiliaria/">TRANSAÇÕES IMOBILIÁRIAS</a></li>
+                                    <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/cursos/secretaria-escolar/">SECRETARIA ESCOLAR</a></li>
+                                    <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/cursos/tecnico-em-transacoes-imobiliaria/">TRANSAÇÕES IMOBILIÁRIAS</a></li>
                               </ul>
                            </li>
                         </ul>
