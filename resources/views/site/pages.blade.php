@@ -12,9 +12,21 @@
                         <!-- Descrição do Pagina -->
                         <p class="card-text">{!! $page->description !!}</p>
 
+                        <div class="container ">
+
+                            <div class="row justify-content-md-center">
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-8 bg-light text-dark p-3 card">
+                                        <h4>Entre em Contato</h4>
+                                        <x-contact-form key="{{ env('RECAPTCHA_CLIENT') }}" />
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-@endsection
+    @endsection
