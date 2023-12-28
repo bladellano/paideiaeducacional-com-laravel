@@ -122,7 +122,7 @@
                                     target="_blank">AUTENTICIDADE DE SEU DOCUMENTO</a></li>
                             <li><a class="dropdown-item" href="https://banco.bradesco/html/classic/produtos-servicos/mais-produtos-servicos/segunda-via-boleto.shtm"
                                     target="_blank">EMISSÃO 2ª VIA DO BOLETO</a></li>
-                            <li><a class="dropdown-item" href="https://paideiaeducacional.com.br/metodo/login.php"
+                            <li><a class="dropdown-item" href="https://paideiaeducacional.ead.guru/ead/account/login/?next=/ead/"
                                     target="_blank">PORTAL DO ALUNO</a></li>
                             <li><a class="dropdown-item" href="https://bndigital.bn.gov.br/"
                                     target="_blank">BIBLIOTECA ON-LINE</a></li>
