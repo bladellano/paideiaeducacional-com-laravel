@@ -23,6 +23,8 @@
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+    <script async src="https://cse.google.com/cse.js?cx=346b33fdd8e5c4225"></script>
+
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
 
     <div id="fb-root"></div>
@@ -65,8 +67,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <a href="{{ route('site.home') }}"><img src="{{ asset('assets/images/logo.png') }}"
-                                class="img-fluid" alt="LOGO" style="max-width: 180px;"></a>
+                        <a href="{{ route('site.home') }}"><img src="{{ asset('assets/images/logo.png') }}" class="img-fluid" alt="LOGO" style="max-width: 180px;"></a>
                     </div>
                     <div class="col-md-6 text-end my-auto mt-2">
                         <ul class="contact-list">
@@ -128,8 +129,7 @@
                                     target="_blank">BIBLIOTECA ON-LINE</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="https://www.paideiaeducacional.net/"
-                            target="_blank">RADIO WEB</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="https://www.paideiaeducacional.net/" target="_blank">RADIO WEB</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="#events">EVENTOS</a> </li>
                     <li class="nav-item"> <a class="nav-link"
                             href="{{ route('site.home') }}/seja-nosso-parceiro">SEJA NOSSO PARCEIRO</a> </li>

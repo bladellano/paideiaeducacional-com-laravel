@@ -84,7 +84,7 @@ Usage: codyhouse.co/license
   
   img, video, svg {
     display: block;
-    max-width: 100%;
+    /* max-width: 100%; */
   }
   
   @media (min-width: 64rem) {

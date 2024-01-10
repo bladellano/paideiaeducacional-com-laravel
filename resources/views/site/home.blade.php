@@ -7,6 +7,7 @@
     {{-- ABOUT  --}}
     <section id="sobre" class="bg-default">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h2>SOBRE NÓS</h2>
@@ -33,6 +34,12 @@
     {{-- MIDIAS --}}
     <section id="midias">
         <div class="container">
+
+            <div class="row justify-content-md-center">
+                <div class="col-md-10">
+                    <div class="gcse-search"></div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h2>MÍDIAS</h2>
