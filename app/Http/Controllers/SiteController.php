@@ -19,7 +19,7 @@ class SiteController extends Controller
         # $videos = Video::all();
         $videos = Video::latest()->limit(4)->get();
 
-        $banners = Banner::latest()->limit(3)->get();
+        $banners = Banner::latest()->limit(5)->get();
 
         $articles = Article::latest()->limit(4)->get();
 
