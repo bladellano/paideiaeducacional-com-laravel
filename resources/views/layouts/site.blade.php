@@ -37,6 +37,8 @@
 
 <body>
 
+    
+
     <header>
         <div class="bar-social-icons">
 
@@ -91,50 +93,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nBarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-between w-100">
-                    <li class="nav-item"> <a class="nav-link active"
-                            href="{{ route('site.home') }}#sobre">INSTITUCIONAL</a> </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            CURSOS
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.com.br/loja_virtual/index.php">PROFISSIONALIZANTES</a></li>
-                            <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/cursos/eja-ensino-fundamental/bundle/">EJA FUNDAMENTAL</a></li>
-                            <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/cursos/eja-ensino-medio/bundle/">EJA MÉDIO</a></li>
-                            <li><a class="dropdown-item" target="_blank" href="https://unibtadigital.com.br/graduacoes">GRADUAÇÃO</a></li>
-                            <li><a class="dropdown-item" target="_blank" href="https://unibtadigital.com.br/pos-graduacoes">PÓS-GRADUAÇÃO</a></li>
-                            <li><a class="dropdown-item" href="#">TÉCNICO &raquo; </a>
-                                <ul class="submenu dropdown-menu">
-                                    <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/cursos/secretaria-escolar/">SECRETARIA ESCOLAR</a></li>
-                                    <li><a class="dropdown-item" target="_blank" href="https://paideiaeducacional.ead.guru/cursos/tecnico-em-transacoes-imobiliaria/">TRANSAÇÕES IMOBILIÁRIAS</a></li>
-                              </ul>
-                           </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            SERVICOS ON-LINE
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="https://validar-certificado.paideiaeducacional.com"
-                                    target="_blank">AUTENTICIDADE DE SEU DOCUMENTO</a></li>
-                            <li><a class="dropdown-item" href="https://banco.bradesco/html/classic/produtos-servicos/mais-produtos-servicos/segunda-via-boleto.shtm"
-                                    target="_blank">EMISSÃO 2ª VIA DO BOLETO</a></li>
-                            <li><a class="dropdown-item" href="https://paideiaeducacional.ead.guru/ead/account/login/?next=/ead/"
-                                    target="_blank">PORTAL DO ALUNO</a></li>
-                            <li><a class="dropdown-item" href="https://bndigital.bn.gov.br/"
-                                    target="_blank">BIBLIOTECA ON-LINE</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="https://www.paideiaeducacional.net/" target="_blank">RADIO WEB</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#events">EVENTOS</a> </li>
-                    <li class="nav-item"> <a class="nav-link"
-                            href="{{ route('site.home') }}/seja-nosso-parceiro">SEJA NOSSO PARCEIRO</a> </li>
-                    <li class="nav-item"> <a class="nav-link btn-high" href="{{ route('site.home') }}#fale-conosco">FALE CONOSCO</a> </li>
-                </ul>
+
+                <x-menu-site :menu="$menu"/>
+
             </div>
         </div>
     </nav>
