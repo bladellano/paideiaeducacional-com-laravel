@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Banner;
+use App\Models\Event;
+use App\Models\ImageGallery;
+use App\Models\Page;
+use App\Models\Testimonial;
+use App\Models\Visit;
 
 class HomeController extends Controller
 {
@@ -23,6 +28,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+
+        $totalVisits = Visit::count();
+        $totalEvents = Event::count();
+        $totalPages = Page::count();
+        $totalTestemonials = Testimonial::count();
+        $totalPhotos = ImageGallery::count();
+
+        return view('admin.home', compact('totalVisits', 'totalEvents', 'totalPages', 'totalTestemonials', 'totalPhotos'));
     }
 }
