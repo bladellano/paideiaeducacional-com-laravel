@@ -12,6 +12,8 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ImageGalleryController;
+use App\Http\Controllers\MenuController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +56,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('articles', ArticleController::class);
         Route::resource('testimonials', TestimonialController::class);
         Route::resource('image-gallery', ImageGalleryController::class);
+
+        Route::resource('site-menu', MenuController::class);
 
         Route::get('/visits', [VisitController::class, 'index'])->name('visits.index');
 

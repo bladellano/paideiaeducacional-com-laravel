@@ -408,9 +408,14 @@ return [
             ],
         ],
         [
+            'text'    => 'Menu do Site',
+            'icon_color' => 'red',
+            'url'  => 'admin/site-menu',
+        ],
+        [
             'text'       => 'Registrar Usuário',
             'icon_color' => 'cyan',
-            'url'        => env('APP_URL') .'/register',
+            'url'        => env('APP_URL') . '/register',
         ],
         // Fim da customização
 

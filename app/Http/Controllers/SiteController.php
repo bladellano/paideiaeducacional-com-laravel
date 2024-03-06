@@ -9,6 +9,7 @@ use App\Models\Banner;
 use App\Models\Article;
 use App\Models\Testimonial;
 use App\Models\ImageGallery;
+use Illuminate\Support\Facades\Artisan;
 
 class SiteController extends Controller
 {
@@ -17,6 +18,16 @@ class SiteController extends Controller
 
     public function __construct()
     {
+
+        // Limpa o cache de rotas
+        Artisan::call('route:clear');
+
+        // Limpa o cache de configuração de rota
+        Artisan::call('config:clear');
+
+        // Opcional: limpa o cache de visualizações
+        Artisan::call('view:clear');
+
         $this->menu = config('menu-site');
     }
 
