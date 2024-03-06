@@ -13,7 +13,7 @@
     @endif
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-10">
 
             <div class="card card-primary p-2">
 
@@ -27,7 +27,7 @@
 
                     <div class="mb-3">
                         <label for="menu" class="form-label">Estrutura do Menu</label>
-                        <textarea class="form-control" name="menu" id="menu" cols="30" rows="20">{{ $menu }}</textarea>
+                        <textarea style="background-color: black; color: #7fff00;" class="form-control" name="menu" id="menu" cols="30" rows="20">{{ $menu }}</textarea>
                     </div>
 
                     <div class="mb-3">
@@ -40,3 +40,4 @@
     </div>
 
 @stop
+

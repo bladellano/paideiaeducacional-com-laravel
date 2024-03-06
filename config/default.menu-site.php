@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * "text": nome do botão do menu.
+ * "url": endereço externo (com http:// ou https://) ou interno do site (/qualquer-coisa).
+ * "env('APP_URL')" é mesma coisa que "https://paideiaeducacional.com/".
+ */
+
 return
     [
         [
